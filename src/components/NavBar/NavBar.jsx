@@ -1,20 +1,21 @@
 import aix from '../../assets/aix.png';
-import { Box, Flex, Image, Text, UnorderedList, ListItem, IconButton, Divider, Heading } from '@chakra-ui/react';
+import { Box, Flex, Image, Text, UnorderedList, ListItem, IconButton, Divider, Heading, useColorMode } from '@chakra-ui/react';
 import { navBarStyles } from './navBarStyles';
 import { Link } from 'react-router-dom';
-import Portfolio from '../../views/Portfolio/Portfolio';
-import AboutMe from '../../views/AboutMe/AboutMe';
 import { ChevronRightIcon} from "@chakra-ui/icons";
-import Contact from '../../views/Contact/Contact';
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { useState } from 'react';
 import CustomModal from './Helper/CustomModal';
 import CVAixaGalin from '../../assets/CVAixaGalin.pdf'
+import { DarkModeButton } from './Helper/DarkModeButton';
+
+//import { motion } from "framer-motion";
 
 const NavBar = () => {
 
   const [showModal, setShowModal] = useState(false);
+  const { toggleColorMode } = useColorMode()
 
   const handleWorkClick = () => {
     setShowModal(true);
@@ -25,14 +26,20 @@ const NavBar = () => {
   };
   
   return (
-    <Flex {...navBarStyles.flex}>
+    <Flex {...navBarStyles.flex}  >
       <Box {...navBarStyles.box}>
+
+  
      
           <Image {...navBarStyles.img} src={aix} alt="tu foto" />
 
           <Heading   fontWeight="bold" textAlign='center' color="#ffa692">AIXA GALIN </Heading>
 
           <Text  fontSize="xl"  mb="2" color='white' textAlign='center'> Full-Stack Web Developer </Text>
+
+          <Flex justify="center" color="#09aeba" align="center" my="1rem">
+          <DarkModeButton />
+        </Flex>
 
           <Flex mt="15px"  >
             <UnorderedList listStyleType="none">

@@ -1,53 +1,47 @@
-import { useEffect, useState } from "react";
 // import Footer from '../../components/Footer/Footer'
-import { Flex, Heading, Text} from '@chakra-ui/react';
+import { Flex, Heading, Text, Box} from '@chakra-ui/react';
 import  {homeStyles} from './homeStyles';
-import collection from '../../assets/collection.jpg';
-import FondoContact1 from '../../assets/FondoContact1.jpg';
+import HomeText from '../../views/Home/Helper/Text/HomeText';
 
 import NavBar from '../../components/NavBar/NavBar';
 import { motion } from "framer-motion";
 
 const Home = () => {
 
-  const [texto, setTexto] = useState("");
-
-  useEffect(() => {
-    const textoCompleto = "Welcome!!";
-    let contador = 0;
-    
-    const intervalo = setInterval(() => {
-      setTexto((prevTexto) => {
-        contador++;
-        return textoCompleto.slice(0, contador);
-      });
-      if (contador >= textoCompleto.length) {
-        clearInterval(intervalo);
-      }
-    }, 100);
-    
-    return () => clearInterval(intervalo);
-  }, []);
-    
-
 
   return (
-    <Flex {...homeStyles.container} height='100%' bg={`url(${FondoContact1})`} backgroundRepeat='no-repeat' backgroundSize='cover !important'>
+    <Flex {...homeStyles.container} height='100%' >
         
-        <Flex>
-            <NavBar/>
-        </Flex>
+          <Flex>
+              <NavBar/>
+          </Flex>
 
-        <Flex>
+          <Flex
+            direction="column"
+            h="50%"
+            w="35rem"
+            gap="3.5rem"
+            justify="center"
+            align='center'
+          >
+            <Heading align="center" fontSize="50px" w="30rem" marginTop="100px">
+            Welcome! I'm Aixa! 
+            </Heading>
+            <Box align="center" h="15rem" w="30rem">
+            <HomeText />
+            </Box>
+          </Flex>
+
         <motion.div
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay: 0.5 }}
-      style={{ color: "grey", fontSize: "5rem",  marginLeft: "50px", marginTop: "50px" }}
-    >
-      {texto}
-    </motion.div>
-        </Flex>
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+        </motion.div>
+
+          {/*-MOVIL-------------------------------------------------------------*/}
+
+   
     
 
     </Flex>

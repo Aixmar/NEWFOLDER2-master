@@ -1,15 +1,19 @@
 export const navBarStyles = {
-    flex: {
-        position: 'relative-left',
-        bg:"#68747a",
-        h: '100vh',
-        boxShadow: '0 4px 12px 0 rgba(0, 0, 0, 0.05)',
-        w: '400px',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        marginTop: 0,
-        marginBottom: 0,
-      },
+   flex: {
+      position: 'relative-left',
+      bg: "#68747a",
+      h: '150vh',
+      w: '400px',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+      marginTop: 0,
+      marginBottom: 0,
+      borderRight:"0.5px",
+      borderColor:"black",
+      boxShadow: "2px 0 10px rgba(0, 0, 0, 0.5)",
+      py:"3rem",
+    },
+    
     
       box: {
         display: 'relative-top',
