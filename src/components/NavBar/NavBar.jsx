@@ -36,6 +36,7 @@ const NavBar = () => {
 
           <Flex mt="15px"  >
             <UnorderedList listStyleType="none">
+              <ListItem _hover={{ bg: "#ffa692" }} mt="15px" padding='5px' color='white' ><Link to='/' >Home <ChevronRightIcon /></Link></ListItem>
               <ListItem _hover={{ bg: "#ffa692" }} mt="15px" padding='5px' color='white' ><Link to='/portfolio' >Portfolio <ChevronRightIcon /></Link></ListItem>
               <ListItem _hover={{ bg: "#ffa692" }} mt="15px" padding='5px' color='white'><Link to='/aboutme'>About Me<ChevronRightIcon /></Link></ListItem>
               <ListItem _hover={{ bg: "#ffa692" }} mt="15px" padding='5px' color='white'><Link to='/contact'>Contact Me<ChevronRightIcon /></Link></ListItem>

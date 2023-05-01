@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 import { Routes, Route, useLocation } from "react-router-dom";
 // import './App.css'
-import {AboutMe,Home, Portfolio, NavBar, Contact} from "./views/index";
+import {AboutMe, Home, Portfolio, NavBar, Contact} from "./views/index";
 
 
 function App() {
